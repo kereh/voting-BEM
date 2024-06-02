@@ -29,6 +29,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
+import { LogIn, LineChart } from "lucide-react";
 import Link from "next/link";
 
 export default function Page() {
@@ -105,15 +106,20 @@ export default function Page() {
               <CardFooter className="items-center gap-3">
                 <Button
                   type="submit"
-                  className="w-full"
+                  className="flex w-full items-center gap-3"
                   disabled={isPending}
                   variant="default"
                 >
-                  Login
+                  <LogIn />
+                  <span>Login</span>
                 </Button>
                 <Link href="/hasil" className="w-full">
-                  <Button className="w-full" variant="secondary">
-                    Halaman Hasil
+                  <Button
+                    className="flex w-full items-center gap-3"
+                    variant="secondary"
+                  >
+                    <LineChart />
+                    <span>Halaman Hasil</span>
                   </Button>
                 </Link>
               </CardFooter>
