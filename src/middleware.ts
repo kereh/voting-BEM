@@ -15,7 +15,10 @@ export default auth((req) => {
   if (session && login) return Response.redirect(new URL("/", nextUrl));
   if (api) return;
 
-  return;
+  return Response.json({
+    message: "Belum skrng guys",
+    author: "Ronaldo Kereh",
+  });
 });
 
 export const config = {
