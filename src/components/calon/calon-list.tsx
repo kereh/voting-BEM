@@ -13,7 +13,11 @@ export default function CalonList({ data }: Calon) {
   const { isVoting } = useAppStore();
 
   if (isVoting) {
-    return <LoadingAnimation />;
+    return (
+      <div className="grid h-[85vh] place-content-center md:h-screen">
+        <LoadingAnimation />
+      </div>
+    );
   }
 
   return (

@@ -10,8 +10,7 @@ export async function login({ nim }: { nim: string }) {
   if (!user) return { error: "NIM Tidak Terdaftar" };
   if (user.voted)
     return {
-      error:
-        "NIM Tidak Bisa Digunakan Kembali Karena NIM Yang Anda Masukan Sudah Pernah Digunakan Untuk Memilih",
+      error: "NIM yang anda masukan sudah pernah digunakan",
     };
 
   try {

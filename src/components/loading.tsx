@@ -13,7 +13,9 @@ export default function LoadingAnimation() {
           priority
         />
       </div>
-      <h1 className="text-sm text-muted-foreground">Mohon Tunggu...</h1>
+      <h1 className="text-center text-sm text-muted-foreground">
+        Mohon Tunggu ...
+      </h1>
     </div>
   );
 }

@@ -54,6 +54,7 @@ export default function Page() {
             variant: "destructive",
           });
         }
+        console.log(data);
         return toast({
           title: "Login Berhasil",
           description: `Silahkan memilih 😊`,
@@ -110,15 +111,16 @@ export default function Page() {
                   disabled={isPending}
                   variant="default"
                 >
-                  <LogIn />
+                  <LogIn className="h-4 w-4" />
                   <span>Login</span>
                 </Button>
                 <Link href="/hasil" className="w-full">
                   <Button
                     className="flex w-full items-center gap-3"
                     variant="secondary"
+                    disabled={isPending}
                   >
-                    <LineChart />
+                    <LineChart className="h-4 w-4" />
                     <span>Halaman Hasil</span>
                   </Button>
                 </Link>
