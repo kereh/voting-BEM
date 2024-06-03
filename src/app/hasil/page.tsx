@@ -17,12 +17,10 @@ import LoadingAnimation from "@/components/loading";
 
 export default function Page() {
   const { data, isLoading } = api.calon.semua.useQuery(undefined, {
-    refetchInterval: 30000,
+    refetchInterval: 60000,
     refetchOnWindowFocus: false,
-    refetchIntervalInBackground: true,
     refetchOnReconnect: false,
     refetchOnMount: false,
-    staleTime: 120000,
   });
   const { data: pemilih, isLoading: loadingPemilih } =
     api.users.jumlah.useQuery(undefined, {
@@ -45,10 +43,8 @@ export default function Page() {
           <CardHeader>
             <CardTitle>Hasil Suara</CardTitle>
             <CardDescription>
-              Berikut merupakan hasil perolehan suara.{" "}
-              <span className="font-semibold">
-                Data diperbarui otomatis tiap 30 detik.
-              </span>
+              Berikut merupakan hasil perolehan suara. Data diperbarui otomatis
+              tiap 1 menit atau anda bisa refresh halaman ini.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-5">
@@ -65,7 +61,7 @@ export default function Page() {
                 </div>
                 <Progress value={d.suara.length} max={600} />
                 <div className="flex items-center justify-end">
-                  <Badge className="text-md" variant="outline">
+                  <Badge className="text-sm" variant="secondary">
                     {d.suara.length} / {pemilih}
                   </Badge>
                 </div>
@@ -73,8 +69,8 @@ export default function Page() {
             ))}
           </CardContent>
           <CardFooter className="justify-center">
-            <Link href="/login">
-              <Button variant="secondary">Halaman Login</Button>
+            <Link href="/login" className="w-full">
+              <Button className="w-full">Halaman Login</Button>
             </Link>
           </CardFooter>
         </Card>
