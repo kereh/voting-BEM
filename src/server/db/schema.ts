@@ -20,7 +20,7 @@ export const users = createTable("user", {
     .notNull()
     .primaryKey()
     .$defaultFn(() => crypto.randomUUID()),
-  nim: varchar("nim", { length: 12 }).notNull().unique(),
+  nim: varchar("nim", { length: 12 }).notNull(),
   name: varchar("name", { length: 150 }).notNull(),
   calonId: varchar("calon_id", { length: 255 }).references(() => calon.id),
   voted: boolean("voted").$default(() => false),
