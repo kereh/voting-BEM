@@ -10,7 +10,7 @@ export default async function Page() {
   return (
     <div className="grid h-[85vh] w-full place-content-center space-y-10 md:h-screen">
       <UserDetail
-        name={session?.user.name ?? ""}
+        name={session?.user.name?.toUpperCase() ?? ""}
         nim={session?.user.nim ?? ""}
       />
       <CalonList data={data} />
