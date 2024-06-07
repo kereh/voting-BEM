@@ -21,8 +21,8 @@ type CalonIdentity = {
   no: string;
   pres: string;
   wapres: string;
-  visi: string;
-  misi: string[];
+  visi: string | null;
+  misi: string[] | null;
 };
 
 export default function CalonCard({
