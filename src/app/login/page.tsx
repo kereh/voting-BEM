@@ -31,6 +31,7 @@ import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
 import { LogIn, LineChart } from "lucide-react";
 import Link from "next/link";
+import LoadingAnimation from "@/components/loading";
 
 export default function Page() {
   const [isPending, setTransition] = useTransition();
@@ -54,7 +55,6 @@ export default function Page() {
             variant: "destructive",
           });
         }
-        console.log(data);
         return toast({
           title: "Login Berhasil",
           description: `Silahkan memilih 😊`,
@@ -62,6 +62,13 @@ export default function Page() {
       });
     });
   }
+
+  if (isPending)
+    return (
+      <div className="grid h-[85vh] place-content-center md:h-screen">
+        <LoadingAnimation />
+      </div>
+    );
 
   return (
     <div className="grid h-[85vh] w-full place-content-center md:h-screen">
