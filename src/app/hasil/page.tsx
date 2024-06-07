@@ -31,7 +31,7 @@ export default function Page() {
 
   if (isLoading || loadingPemilih)
     return (
-      <div className="grid h-screen place-content-center">
+      <div className="grid h-[85vh] md:h-screen place-content-center">
         <LoadingAnimation />
       </div>
     );
