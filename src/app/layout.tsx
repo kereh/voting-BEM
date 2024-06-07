@@ -22,7 +22,7 @@ export default function RootLayout({
       className={`${GeistSans.variable}`}
       suppressHydrationWarning
     >
-      <body className="container">
+      <body className="container p-4">
         <Theme defaultTheme="dark" attribute="class" disableTransitionOnChange>
           <TRPCReactProvider>{children}</TRPCReactProvider>
         </Theme>
@@ -32,4 +32,4 @@ export default function RootLayout({
   );
 }
 
-export const dynamic = 'force-dynamic'
+export const dynamic = "force-dynamic";

@@ -13,7 +13,7 @@ export default function UserDetail({ name, nim }: Props) {
     <div>
       {!isVoting && (
         <div className="md:text-center">
-          <h1 className="font-semibold">Selamat datang 👋</h1>
+          <h1 className="font-semibold">Selamat datang</h1>
           <h2 className="text-muted-foreground">
             {name} - {nim}
           </h2>

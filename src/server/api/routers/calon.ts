@@ -11,6 +11,7 @@ export const calonRouter = createTRPCRouter({
   semua: publicProcedure.query(async ({ ctx }) => {
     return await ctx.db.query.calon.findMany({
       with: { suara: true },
+      orderBy: (calon, { asc }) => [asc(calon.no)],
     });
   }),
   vote: protectedProcedure

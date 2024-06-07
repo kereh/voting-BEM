@@ -61,12 +61,14 @@ export default function CalonCard({
             <TableRow className="border-0">
               <TableCell className="font-medium">Presiden BEM</TableCell>
               <TableCell>:</TableCell>
-              <TableCell className="text-left">{pres}</TableCell>
+              <TableCell className="text-left font-semibold">{pres}</TableCell>
             </TableRow>
             <TableRow className="border-0">
               <TableCell className="font-medium">Wakil Presiden BEM</TableCell>
               <TableCell>:</TableCell>
-              <TableCell className="text-left">{wapres}</TableCell>
+              <TableCell className="text-left font-semibold">
+                {wapres}
+              </TableCell>
             </TableRow>
           </TableBody>
         </Table>
