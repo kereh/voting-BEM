@@ -111,26 +111,16 @@ export default function Page() {
                   )}
                 />
               </CardContent>
-              <CardFooter className="items-center gap-3">
+              <CardFooter className="items-center">
                 <Button
                   type="submit"
-                  className="flex w-full items-center gap-3"
+                  className="flex items-center gap-3"
                   disabled={isPending}
                   variant="default"
                 >
                   <LogIn className="h-4 w-4" />
                   <span>Login</span>
                 </Button>
-                <Link href="/hasil" className="w-full">
-                  <Button
-                    className="flex w-full items-center gap-3"
-                    variant="secondary"
-                    disabled={isPending}
-                  >
-                    <LineChart className="h-4 w-4" />
-                    <span>Halaman Hasil</span>
-                  </Button>
-                </Link>
               </CardFooter>
             </form>
           </Form>

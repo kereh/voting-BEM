@@ -43,7 +43,7 @@ export default function CalonCard({
       });
       signOut({
         redirect: true,
-        callbackUrl: "/hasil",
+        callbackUrl: "/login",
       });
     },
   });

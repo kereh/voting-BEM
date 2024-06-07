@@ -39,13 +39,12 @@ export const calon = createTable("calon", {
     .notNull()
     .primaryKey()
     .$defaultFn(() => crypto.randomUUID()),
-  no: varchar("no_urut", { length: 5 }).notNull().unique(),
-  pres: varchar("pres", { length: 150 }).notNull(),
-  wapres: varchar("wapres", { length: 150 }).notNull(),
-  visi: text("visi").notNull(),
+  no: varchar("no_urut", { length: 10 }).notNull().unique(),
+  pres: varchar("pres", { length: 255 }).notNull(),
+  wapres: varchar("wapres", { length: 255 }).notNull(),
+  visi: text("visi"),
   misi: text("misi")
     .array()
-    .notNull()
     .default(sql`ARRAY[]::text[]`),
 });
 

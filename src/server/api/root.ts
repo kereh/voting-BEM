@@ -1,7 +1,7 @@
 import { createCallerFactory, createTRPCRouter } from "@/server/api/trpc";
 import { inferRouterInputs, inferRouterOutputs } from "@trpc/server";
 import { calonRouter } from "@/server/api/routers/calon";
-import { usersRouter } from "@/server/api/routers/users";
+// import { usersRouter } from "@/server/api/routers/users";
 
 /**
  * This is the primary router for your server.
@@ -10,7 +10,7 @@ import { usersRouter } from "@/server/api/routers/users";
  */
 export const appRouter = createTRPCRouter({
   calon: calonRouter,
-  users: usersRouter,
+  // users: usersRouter,
 });
 
 // export type definition of API
