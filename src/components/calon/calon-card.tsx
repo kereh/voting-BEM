@@ -105,7 +105,7 @@ export default function CalonCard({
                   Misi
                 </h1>
                 <ul className="space-y-3">
-                  {misi.map((m, i) => (
+                  {misi?.map((m, i) => (
                     <li key={i}>
                       {i + 1}. {m}
                     </li>
