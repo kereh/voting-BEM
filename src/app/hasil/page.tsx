@@ -59,7 +59,7 @@ export default function Page() {
                     <span className="font-normal">{d.wapres}</span>
                   </h1>
                 </div>
-                <Progress value={d.suara.length} max={600} />
+                <Progress value={d.suara.length} max={d.suara.length} />
                 <div className="flex items-center justify-end">
                   <Badge className="text-sm" variant="secondary">
                     {d.suara.length} / {pemilih}
