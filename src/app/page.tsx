@@ -8,7 +8,7 @@ export default async function Page() {
   const session = await auth();
 
   return (
-    <div className="my-7 grid w-full place-content-center space-y-10 md:h-screen">
+    <div className="my-7 grid w-full place-content-center space-y-10 md:-my-7 md:h-screen">
       <UserDetail
         name={session?.user.name?.toUpperCase() ?? ""}
         nim={session?.user.nim ?? ""}

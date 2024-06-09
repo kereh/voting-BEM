@@ -8,10 +8,8 @@ import {
   boolean,
   timestamp,
   varchar,
-  json,
 } from "drizzle-orm/pg-core";
 import { type AdapterAccount } from "next-auth/adapters";
-import { array } from "zod";
 
 export const createTable = pgTableCreator((name) => `voting_bem_${name}`);
 

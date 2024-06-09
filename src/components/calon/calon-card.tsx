@@ -15,6 +15,8 @@ import { api } from "@/trpc/react";
 import { signOut } from "next-auth/react";
 import { useAppStore } from "@/stores/app";
 import { useToast } from "@/components/ui/use-toast";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Badge } from "@/components/ui/badge";
 
 type CalonIdentity = {
   id: string;
@@ -97,22 +99,29 @@ export default function CalonCard({
           <SheetContent>
             <div className="my-5 flex flex-col gap-5">
               <div className="space-y-3 leading-relaxed">
-                <h1 className="text-lg font-semibold underline underline-offset-4">
+                <h1 className="text-md font-semibold underline underline-offset-4">
                   Visi
                 </h1>
-                <p>{visi}</p>
+                <p className="text-sm text-muted-foreground md:text-base">
+                  {visi}
+                </p>
               </div>
               <div className="space-y-3 leading-relaxed">
-                <h1 className="underline-0ffset-4 text-lg font-semibold underline">
+                <h1 className="underline-0ffset-4 text-md font-semibold underline">
                   Misi
                 </h1>
-                <ul className="space-y-3">
-                  {misi?.map((m, i) => (
-                    <li key={i}>
-                      {i + 1}. {m}
-                    </li>
-                  ))}
-                </ul>
+                <ScrollArea className="h-[450px] w-full rounded-md border px-4 py-2 md:h-[350px]">
+                  <ul>
+                    {misi?.map((m, i) => (
+                      <li
+                        key={i}
+                        className="my-3 text-sm text-muted-foreground md:text-base"
+                      >
+                        [{i + 1}]. {m}
+                      </li>
+                    ))}
+                  </ul>
+                </ScrollArea>
               </div>
             </div>
           </SheetContent>

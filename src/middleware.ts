@@ -16,8 +16,8 @@ export default auth((req) => {
   if (api) return;
 
   // return Response.json({
-  //   message: "Belum skrng guys",
-  //   author: "Ronaldo Kereh",
+  //   message: "Voting sudah ditutup",
+  //   from: "Panitia Pemilihan",
   // });
 
   return;
