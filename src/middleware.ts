@@ -15,12 +15,12 @@ export default auth((req) => {
   if (session && login) return Response.redirect(new URL("/", nextUrl));
   if (api) return;
 
-  return Response.json({
-    message: "Voting sudah ditutup",
-    from: "Panitia Pemilihan",
-  });
+  // return Response.json({
+  //   message: "Voting sudah ditutup",
+  //   from: "Panitia Pemilihan",
+  // });
 
-  // return;
+  return;
 });
 
 export const config = {
